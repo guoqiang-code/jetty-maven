@@ -1,5 +1,10 @@
 package com.rivergame;
 
+import org.eclipse.jetty.server.Server;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
@@ -9,20 +14,18 @@ import javax.servlet.ServletContextListener;
  * @description：
  * @version: 1.0
  */
-public class AppInitializer implements ServletContextListener {
+public class ServerAppInitializer implements ServletContextListener {
+    public final Logger logger = LoggerFactory.getLogger(ServerAppInitializer.class);
 
     @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         // 在这里执行服务启动时的初始化逻辑
-        System.out.println("Service initialization completed.");
-
-        // 示例：加载配置文件
-        // ConfigurationLoader.loadConfig();
+        logger.info("Service initialization completed.");
     }
 
     @Override
     public void contextDestroyed(ServletContextEvent servletContextEvent) {
         // 在这里执行服务关闭时的清理逻辑
-        System.out.println("Service shutdown completed.");
+        logger.info("Service shutdown completed.");
     }
 }

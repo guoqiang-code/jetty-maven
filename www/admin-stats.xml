@@ -19,7 +19,7 @@ detected.
 	<!--  + war OR resourceBase                                          -->
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<Set name="contextPath">/</Set>
-	<Set name="war"><Property name="jetty.webapps" default="."/>/server-web.war</Set>
+	<Set name="war"><Property name="jetty.webapps" default="."/>/jetty-maven-1.0-SNAPSHOT.war</Set>
 
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<!-- Optional context configuration                                  -->
